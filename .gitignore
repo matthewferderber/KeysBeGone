@@ -1,0 +1,9 @@
+node_modules
+keys.json
+config.json
+typings
+.settings
+test
+.settings/launch.json
+
+test/test.js
