@@ -3,13 +3,9 @@
 /*jslint node: true */
 'use strict';
 
-var path = require('path');
-var jf = require('jsonfile');
-var fs = require('fs');
-var pkg = require(path.join(__dirname, 'package.json'));
 var program = require('commander');
-var util = require('util');
 var configManager = require('./lib/configManager');
+var keyReplacer = require('./lib/keyReplacer');
 program
   .version('0.0.1');
 //Add a key
@@ -17,6 +13,11 @@ program
   .command('add <key> <value>')
   .description('add a key to the config')
   .action(configManager.addKey);
+
+  program
+    .command('replace')
+    .description('Replaces the keys in the current working directory')
+    .action(keyReplacer.replaceKeys);
 
 //Remove a key
 program
