@@ -14,10 +14,10 @@ program
   .description('add a key to the config')
   .action(configManager.addKey);
 
-  program
-    .command('replace')
-    .description('Replaces the keys in the current working directory')
-    .action(keyReplacer.replaceKeys);
+program
+  .command('replace')
+  .description('Replaces the keys in the current working directory')
+  .action(keyReplacer.replaceKeys);
 
 //Remove a key
 program
@@ -25,3 +25,8 @@ program
   .description('Removes a key from the config')
   .action(configManager.removeKey);
 program.parse(process.argv);
+
+//If no arguments are specified, replace keys
+if (!program.args.length) {
+  keyReplacer.replaceKeys();
+}

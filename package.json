@@ -25,7 +25,8 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "commander": "^2.8.1",
-    "jsonfile": "^2.0.0"
+    "jsonfile": "^2.0.0",
+    "node-uuid": "^1.4.3"
   },
   "devDependencies": {
     "chai": "^2.3.0",

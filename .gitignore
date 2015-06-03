@@ -6,4 +6,4 @@ typings
 test
 .settings/launch.json
 
-test/test.js
+.tests/test.js
